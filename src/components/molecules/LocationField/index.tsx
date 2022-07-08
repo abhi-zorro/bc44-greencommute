@@ -19,7 +19,6 @@ const useStyles = makeStyles({
 });
 
 interface LocationFieldProps {
-  width: string;
   location: string;
   onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
 }
@@ -48,7 +47,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const LocationBox: React.FC<LocationFieldProps> = ({ width, location, onChangeHandler, ...props }) => {
+const LocationBox: React.FC<LocationFieldProps> = ({ location, onChangeHandler, ...props }) => {
   const classes = useStyles();
 
   const wrapHandleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

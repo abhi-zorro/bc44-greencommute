@@ -18,7 +18,6 @@ export const FilledLocationField = Template.bind({});
 
 FilledLocationField.args = {
   location: 'East Maredpally, Secunderabad',
-  width: '350',
   onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => {
     console.log('Hello');
   },
