@@ -11,7 +11,7 @@ import { CommonProps } from '@mui/material/OverridableComponent';
 interface MenuItemProps {
   component: React.FC;
   selectedComponent: React.FC;
-  itemData: String;
+  itemData: string;
   selected: boolean;
   handleState?: React.MouseEventHandler<HTMLLIElement>;
 }

@@ -2,16 +2,16 @@
  * @author Bhavani Somanchi <bhavani.somanchi@zemosolabs.com>
  */
 
- import { Autocomplete, Chip, styled, TextField } from '@mui/material';
+import { Autocomplete, styled, TextField } from '@mui/material';
 import responsiveTheme from '../../../theme/index';
 import ChipItem from '../../molecules/ChipItem';
 import React from 'react';
 
 interface InputProps {
-  placeholder: string | undefined,
-  values?: string[],
-  handleClick: React.MouseEventHandler<HTMLDivElement>
-  handleDelete: React.MouseEventHandler<HTMLDivElement>
+  placeholder: string | undefined;
+  values?: string[];
+  handleClick: React.MouseEventHandler<HTMLDivElement>;
+  handleDelete: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const StyledInput = styled(TextField)(() => ({
@@ -56,39 +56,31 @@ const InputComponent = (props: InputProps) => {
   let values: string[] = props.values ? props.values : [];
   console.log(values);
 
-  const { placeholder, handleClick, handleDelete} = props;
+  const { placeholder, handleClick, handleDelete } = props;
   return (
     <Autocomplete
-        multiple
-        id="tags-filled"
-        options={[]}
-        freeSolo
-        onInputChange={(event, newInputValue) => values.push(newInputValue)}
-        renderInput={(params) => (
-          <StyledInput
-            {...params}
-            variant="outlined"
-            label=""
-            placeholder={placeholder}
-          />
-        )}
-
-        renderTags={(value: string[], getTagProps) =>
-          value.map((option: string, index: number) => (
+      multiple
+      id='tags-filled'
+      options={[]}
+      freeSolo
+      onInputChange={(_event, newInputValue) => values.push(newInputValue)}
+      renderInput={(params) => <StyledInput {...params} variant='outlined' label='' placeholder={placeholder} />}
+      renderTags={(value: string[], getTagProps) =>
+        value.map(
+          (option: string, index: number) => (
             <ChipItem
-              label={option} 
-              handleClick = {handleClick}
-              handleDelete = {handleDelete}
+              label={option}
+              handleClick={handleClick}
+              handleDelete={handleDelete}
               color={'primary'}
               {...getTagProps({ index })}
             />
           ),
-          values.push(value[0]))
-          
-        }
-      />
-  
-)};
-
+          values.push(value[0])
+        )
+      }
+    />
+  );
+};
 
 export default InputComponent;

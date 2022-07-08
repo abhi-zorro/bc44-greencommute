@@ -3,9 +3,8 @@
  */
 
 import { makeStyles } from '@mui/styles';
-import { styled } from '@mui/material';
+import { styled, Box, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material';
 import { CommonProps } from '@mui/material/OverridableComponent';
-import { Box, Card, CardActions, CardContent, CardHeader, Grid } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import TypographyComponent from '../../atoms/Typography';
 import theme from '../../../theme';

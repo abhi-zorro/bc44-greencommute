@@ -3,7 +3,7 @@
  */
 
 import theme from '../../../theme';
-import { Container } from '@mui/material';
+import { Container, styled } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Button from '../../atoms/Button';
 import InputField from '../../atoms/InputField';
@@ -11,7 +11,6 @@ import TypographyComponent from '../../atoms/Typography';
 import TabPanel from '../TabPanel';
 import React, { useState } from 'react';
 import { CommonProps } from '@mui/material/OverridableComponent';
-import { styled } from '@mui/material';
 
 interface TabPanelProps {
   searchBarText?: string;

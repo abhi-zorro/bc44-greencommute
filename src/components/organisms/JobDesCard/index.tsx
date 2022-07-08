@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import { CommonProps } from '@mui/material/OverridableComponent';
-import Logo from '../../atoms/Logo';
 import TypographyComponent from '../../atoms/Typography';
 import CustomSvgIcon from '../../atoms/IconSVG';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -62,23 +61,16 @@ const CustomCardActions = styled(CardActions)({
 const CustomCardHeader = styled(CardHeader)({
   padding: '0px',
 });
-const JobDesCard: React.FC<DescProps & CommonProps> = ({
-  companyLogo,
-  postedDate,
-  company,
-  title,
-  location,
-  onClickHandler,
-}) => {
+const JobDesCard: React.FC<DescProps & CommonProps> = ({ companyLogo, postedDate, company, title, location }) => {
   const [isSaved, changeState] = useState<boolean>(false);
   const [isApplied, changeAppliedState] = useState<boolean>(false);
 
   const classes = useStyles();
-  const wrapSaveClickHandle = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const wrapSaveClickHandle = (_event: React.MouseEvent<HTMLButtonElement>) => {
     changeState(!isSaved);
   };
 
-  const wrapApplyClickHandle = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const wrapApplyClickHandle = (_event: React.MouseEvent<HTMLButtonElement>) => {
     changeAppliedState(!isApplied);
   };
 

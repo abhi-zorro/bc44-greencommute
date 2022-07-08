@@ -7,7 +7,6 @@ import Logo from '../../atoms/Logo';
 import Typography from '../../atoms/Typography';
 import theme from '../../../theme';
 import Paper from '@mui/material/Paper';
-import styled from 'styled-components';
 import makeStyles from '@mui/styles/makeStyles';
 
 interface ListProps {
